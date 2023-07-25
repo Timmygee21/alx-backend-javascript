@@ -1,6 +1,7 @@
 # 0x00. ES6 Basics  
 
-![ES6](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/08806026ef621f900121.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230725%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230725T004205Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e80bd9437d93ca61476fbff031c84121374238afb9628024997d130b27af45dd)  
+![ES6](https://user-images.githubusercontent.com/110098940/248701041-deb435ef-4af9-46ca-89cb-d4f7a38a84d3.png)
+  
 
 - Resources  
 Read or watch:  
