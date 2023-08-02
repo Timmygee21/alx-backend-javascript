@@ -1,7 +1,7 @@
+// 0-get_list_students.js
+
+// Sample implementation of getListStudents function
 export default function getListStudents() {
-  return [
-    { firstName: 'Guillaume', id: 1, location: 'San Francisco' },
-    { firstName: 'James', id: 2, location: 'Columbia' },
-    { firstName: 'Serena', id: 5, location: 'San Francisco' },
-  ];
+  // Your implementation here
+  return ['Student 1', 'Student 2', 'Student 3'];
 }
