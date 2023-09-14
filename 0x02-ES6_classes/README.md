@@ -1,6 +1,5 @@
 # 0x02. ES6 classes
 
-```
 
 ---
 
@@ -118,5 +117,3 @@ const myObject = {
 Symbols are typically used in advanced scenarios, and more details on metaprogramming with symbols can be found in the ES6 specification.
 
 ---
-
-```
