@@ -1,6 +1,10 @@
 # 0x02. ES6 classes
 
+<<<<<<< HEAD
 ```
+=======
+
+>>>>>>> 2d4996ac73db80fe88635c78a5f03baebc9e80c0
 ---
 
 # Class Definition and Methods in ES6
@@ -23,7 +27,11 @@ class MyClass {
     this.property1 = property1;
     this.property2 = property2;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 2d4996ac73db80fe88635c78a5f03baebc9e80c0
   // Class methods go here
 }
 ```
@@ -41,11 +49,19 @@ To add methods to a Class, define them within the class body. Here's an example:
 ```javascript
 class MyClass {
   // Constructor and properties...
+<<<<<<< HEAD
   
   method1() {
     // Method logic here
   }
   
+=======
+
+  method1() {
+    // Method logic here
+  }
+
+>>>>>>> 2d4996ac73db80fe88635c78a5f03baebc9e80c0
   method2() {
     // Method logic here
   }
@@ -67,7 +83,11 @@ Static methods belong to the Class itself, rather than instances of the Class. T
 ```javascript
 class MyClass {
   // Constructor and properties...
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 2d4996ac73db80fe88635c78a5f03baebc9e80c0
   static staticMethod() {
     // Static method logic here
   }
@@ -117,5 +137,8 @@ const myObject = {
 Symbols are typically used in advanced scenarios, and more details on metaprogramming with symbols can be found in the ES6 specification.
 
 ---
+<<<<<<< HEAD
 ```
 
+=======
+>>>>>>> 2d4996ac73db80fe88635c78a5f03baebc9e80c0
