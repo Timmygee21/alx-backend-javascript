@@ -1,10 +1,9 @@
 /**
- * A message is displayed on STDOUT
- * @param {string} msg is displayed
+ * Prints message to stdout
+ * @param {string} string - message to print
  */
-
-const displayMessage = (string) => {
-     console.log(string);
-};
+function displayMessage(message) {
+  console.log(message);
+}
 
 module.exports = displayMessage;
