@@ -1,125 +1,66 @@
-# 0x05-Node_JS_basic  
+js (Node) is an open source, cross-platform runtime environment for executing JavaScript code. Node is used extensively for server-side programming, making it possible for developers to use JavaScript for client-side and server-side code without needing to learn an additional language.
 
-## Running JavaScript Using Node.js
-This README provides a brief guide on how to use Node.js for various tasks, including running JavaScript code, working with Node.js modules, reading files, creating HTTP servers, and leveraging Express.js for more advanced routing. Additionally, it covers using ES6 syntax with Babel-node and Nodemon for faster development.
+![node.js](https://private-user-images.githubusercontent.com/110098940/261981433-9d31b74e-6e02-400d-a103-c3fd25f5f248.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTQ0OTE0NDEsIm5iZiI6MTcxNDQ5MTE0MSwicGF0aCI6Ii8xMTAwOTg5NDAvMjYxOTgxNDMzLTlkMzFiNzRlLTZlMDItNDAwZC1hMTAzLWMzZmQyNWY1ZjI0OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQzMFQxNTMyMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jZDQzZjk2YWU3ODNkMzk2NTJhNjhhYmM1OTJhYjI5OTFjNDMzNjQ1YjFlYWNkZDcyM2M4MGJkN2EwNjVjZTRkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.kYddw0wyAy3q1Wvajhe5K7xrtfA6PwIX-fwa-UDlnE4)
 
-### Table of Contents  
-1. Running JavaScript Using Node.js  
-2. Using Node.js Modules  
-3. Reading Files with a Node.js Module  
-4. Accessing Command Line Arguments and Environment Variables  
-5. Creating a Small HTTP Server Using Node.js  
-6. Creating a Small HTTP Server Using Express.js  
-7. Creating Advanced Routes with Express.js  
-8. Using ES6 with Node.js and Babel-node  
-9. Using Nodemon for Faster Development  
+##About  
+- Using Node modules  
+- Using Node JS modules to read files  
+- Use process object to access command line arguments and the environment  
+- Creating HTTP servers with Node JS and Express JS  
+- Using ES6 with Node JS with Babel-node  
+- Using Nodemon  
 
+##Tasks  
+0. Function displayMessage that print in stdout a string argument.  
 
-### 1. Running JavaScript Using Node.js    
-Node.js allows you to execute JavaScript code outside the browser. To run a JavaScript file using Node.js, simply open your terminal and use the following command:
+	- File: 0-console.js  
 
-`node your_file.js`
+1. Scripts that prompts for user input and prints modified output that include the given input.  
 
-### 2. Using Node.js Modules  
-Node.js modules enable you to structure your code and reuse functionality. You can import modules using require:
+	- File: 1-stdin.js  
 
-`const fs = require('fs'); // Example: Importing the 'fs' module for file operations.`
+2. Function countStudents that reads database.csv synchronously and prints out the data.  
 
-### 3. Reading Files with a Node.js Module  
-Node.js provides modules like fs for file operations. Here's how you can read a file using fs:
+	- File: 2-read_file.js  
 
-```
-const fs = require('fs');
+3. Function countStudents that reads database.csv asynchronously and prints out the data.  
 
-fs.readFile('file.txt', 'utf8', (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  console.log(data);
-});
-```
+	- 3-read_file_async.js  
 
-### 4. Accessing Command Line Arguments and Environment Variables  
-You can access command line arguments and environment variables using the process object:
+4. Minimal HTTP server using Nodejs http module.  
 
-```
-// Access command line arguments
-const arg1 = process.argv[2];
+	- Routes:  
+		- GET /: home page.  
+	- File: 4-http.js 
 
-// Access environment variables
-const envVar = process.env.MY_ENV_VARIABLE;
-```
+5. Minimal HTTP server using Nodejs http module.  
+	- Routes:  
+		- GET /: home page  
+		- GET /students: returns list of students in every major.  
+	- File: 5-http.js  
 
-### 5. Creating a Small HTTP Server Using Node.js  
-You can create a basic HTTP server using Node.js's built-in http module. Here's a simple example:
+6. Minimal Express HTTP server.  
 
-```
-const http = require('http');
+	- Routes:  
+		- GET /: home page.  
+	- File: 6-http_express.js  
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World!\n');
-});
+7. Minimal Express HTTP server.  
 
-server.listen(3000, '127.0.0.1', () => {
-  console.log('Server running at http://127.0.0.1:3000/');
-});
-```
+	- Routes:  
+		- GET /: home page.  
+		- GET /students: returns list of students in every major.  
+	- File: 7-http_express.js  
 
-### 6. Creating a Small HTTP Server Using Express.js  
-Express.js is a popular framework for building web applications in Node.js. To create an HTTP server with Express.js, first install Express:
+8. Minimal Express server.  
 
-`npm install express`  
-Then, create an Express app:
-
-```
-const express = require('express');
-const app = express();
-
-app.get('/', (req, res) => {
-  res.send('Hello, Express!');
-});
-
-app.listen(3000, () => {
-  console.log('Express server is running on port 3000');
-});
-```
-
-### 7. Creating Advanced Routes with Express.js  
-Express.js allows you to create advanced routes using route parameters, middleware, and more. Here's an example of a route with a parameter:
-
-```
-app.get('/user/:id', (req, res) => {
-  const userId = req.params.id;
-  // Fetch user data based on 'userId'
-  res.send(`User ID: ${userId}`);
-});
-```
-
-### 8. Using ES6 with Node.js and Babel-node  
-You can use ES6 syntax in Node.js using Babel. First, install the necessary packages:
-
-`npm install @babel/core @babel/node @babel/preset-env`  
-Then, create a .babelrc file:
-
-```
-{
-  "presets": ["@babel/preset-env"]
-}
-```
-
-Now you can use ES6 features by running your script with babel-node:  
-
-`npx babel-node your_es6_script.js`  
-
-### 9. Using Nodemon for Faster Development  
-Nodemon is a tool that automatically restarts your Node.js application when code changes are detected. Install it globally:
-
-`npm install -g nodemon`  
-Then, run your Node.js application using Nodemon:
-
-`nodemon your_file.js`
-
-With Nodemon, you don't need to manually restart your server during development. It will watch all of its files and automatically restart when any changes are detected
+	- Routes:  
+		- GET /: home page.  
+		- GET /students: returns list of students in every major.  
+		- GET /students/:major: returns list of students in given major. (major options: CS and SWE).  
+	- Files:  
+		- utils.js: retrieves data from database.csv.  
+		- AppController.js: / route controller.  
+		- StudentsController.js: /students and /students/:major routes controller.  
+		- index.js: router module.  
+		- server.js: server entry point.  
